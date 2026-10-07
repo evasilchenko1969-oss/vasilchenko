@@ -1799,7 +1799,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04 .случай--телефон .случай__кадр { width: min(100%, 20rem); justify-self: center; }
   #экран-04 .случай--телефон .случай__кадр img { aspect-ratio: 4 / 5; }
   #экран-04 .случай__текст { position: relative; z-index: 2; display: grid; gap: .75rem; justify-items: start; margin-top: -1.5rem; padding-inline: .75rem; }
-  #экран-04 .случай__имя { margin: 0; padding: .55em .85em; border-radius: var(--радиус-малый); box-shadow: var(--тень-чип); }
+  #экран-04 .случай__имя { margin: 0; padding: .55em .85em; border-radius: var(--радиус-малый); font-size: var(--кегль-лид); }
   #экран-04.светлый .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
   #экран-04.тёмный .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
   #экран-04 .случай__метка { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
@@ -1874,7 +1874,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 /* экран 07 */
 #экран-07 .расспрос { margin-top: calc(var(--отступ-блока) * 2); max-width: 52rem; }
   #экран-07 .расспрос .вопрос > summary { font-size: var(--кегль-лид); font-weight: 600; line-height: 1.35; padding-block: .35em; }
-  #экран-07 .расспрос .вопрос > p { max-width: 44rem; font-size: var(--кегль-текст); line-height: 1.6; }
+  #экран-07 .расспрос .вопрос > p { max-width: 46rem; font-size: var(--кегль-лид); line-height: 1.55; }
+  #экран-07.светлый .расспрос .вопрос > p { color: var(--цвет-текст); }
+  #экран-07.тёмный .расспрос .вопрос > p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 90%, transparent); }
   #экран-07.светлый .расспрос .вопрос > summary::after { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-07.тёмный .расспрос .вопрос > summary::after { color: var(--цвет-тёплый-мягкий); }
 

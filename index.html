@@ -6,6 +6,7 @@
 <title>Сайт собирается</title>
 <meta name="description" content="">
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://evasilchenko1969-oss.github.io/vasilchenko/">
 <meta property="og:title" content="Сайт собирается">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
@@ -14,8 +15,10 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Евгения Васильченко",
+  "@id": "https://evasilchenko1969-oss.github.io/vasilchenko/#person",
   "jobTitle": "Блог про нейросети и продвижение во ВКонтакте",
   "description": "Веду блог во ВКонтакте «Евгения Васильченко про нейросети и продвижение».",
+  "url": "https://evasilchenko1969-oss.github.io/vasilchenko/",
   "sameAs": [
     "https://vk.ru/evgeniyavasilchenko",
     "https://max.ru/u/f9LHodD0cOJ8u-Sp2Xkjx8D-F8R5q0F4vUVFUpRsPpmvyljyREmuO0KdEmE",
@@ -45,8 +48,8 @@
   --тень-спутник: 0 30px 60px color-mix(in srgb, #313458 70%, transparent);
   --тень-плиты: 0 40px 100px color-mix(in srgb, #313458 70%, transparent);
   --кегль-h1: 26px;  --кегль-h2: clamp(26px, 4vw, 40px);
-  --кегль-текст: clamp(16px, 1vw, 17px);  --кегль-лид: clamp(17px, 1.1vw, 18px);
-  --кегль-мелкий: 14px;  --кегль-кикер: clamp(14px, 1.1vw, 15px);  --кегль-цифра: 30px;  --разрядка-кикера: .03em;
+  --кегль-текст: clamp(16px, 1.15vw, 20px);  --кегль-лид: clamp(17px, 1.35vw, 23px);
+  --кегль-мелкий: clamp(14px, 1vw, 17px);  --кегль-кикер: clamp(14px, 1.15vw, 19px);  --кегль-цифра: 30px;  --разрядка-кикера: .03em;
   --отступ-секции: clamp(56px, 9vw, 120px);  --отступ-блока: clamp(16px, 2vw, 28px);
   --отступ-секции-тихо: clamp(44px, 7vw, 94px);  --отступ-секции-громко: clamp(64px, 10.5vw, 140px);
   --ширина: 1120px;  --ширина-колонки: 560px;  --радиус: 16px;  --радиус-малый: 8px;
@@ -57,6 +60,25 @@
 }
 @media (min-width: 900px) {
   :root { --кегль-h1: clamp(30px, 2.5vw, 36px); }
+}
+/* правки Евгении по живому первому экрану, 07.10.2026 */
+/* охра на тёмном читалась плохо: кикер, акцентное слово и тёплые детали на тёмном — светлой охрой */
+.блок.тёмный .кикер, .блок.тёмный .кикер .иконка, .блок.тёмный .акцент { color: var(--цвет-тёплый-мягкий); }
+/* две кнопки обложки — одного размера */
+.первый-экран__действие .кнопка { flex: 1 1 0; min-width: 0; justify-content: center; text-align: center; }
+@media (min-width: 900px) {
+  .первый-экран__действие { max-width: 26em; }
+}
+@media (max-width: 899px) {
+  /* кнопки рядом, а не друг под другом: обе и подпись под ними остаются в первом окне */
+  .блок.первый-экран--сцена .первый-экран__действие { flex-flow: row nowrap; }
+  .блок.первый-экран--сцена .первый-экран__действие .кнопка { width: auto; padding-inline: .5em; }
+  /* затемнение не заходит на лицо: кадр держит свою высоту и растворяется книзу в фон секции, дымка — только под текстом */
+  .блок.первый-экран--сцена .картинка--сцена { height: min(72svh, 31em);
+    mask-image: linear-gradient(to bottom, black 56%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 56%, transparent 100%); }
+  .блок.первый-экран--сцена .первый-экран__картинка::after { background: linear-gradient(to top,
+    color-mix(in srgb, var(--вуаль-ключа, var(--цвет-тёмный-фон)) 75%, transparent) 0%,
+    color-mix(in srgb, var(--вуаль-ключа, var(--цвет-тёмный-фон)) 55%, transparent) 26%, transparent 44%); }
 }
 /* меню разделов в шапке — приём resurs-zhizni («беру» 06.10.2026). На телефоне — второй строкой под именем (слово Евгении: меню полезнее строки доверия) */
 @media (max-width: 899px) {

@@ -1790,3 +1790,39 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-03 .обо-мне { grid-template-columns: 1.35fr 1fr; column-gap: 4rem; align-items: start; }
     #экран-03 .обо-мне__портрет { width: 100%; justify-self: stretch; position: sticky; top: 2rem; }
   }
+
+/* экран 04 */
+#экран-04 .случаи { display: grid; gap: calc(var(--отступ-блока) * 2.5); margin-top: calc(var(--отступ-блока) * 2); }
+  #экран-04 .случай { display: grid; gap: 0; }
+  #экран-04 .случай__кадр { margin: 0; }
+  #экран-04 .случай__кадр img { aspect-ratio: 16 / 10; object-position: top center; }
+  #экран-04 .случай--телефон .случай__кадр { width: min(100%, 20rem); justify-self: center; }
+  #экран-04 .случай--телефон .случай__кадр img { aspect-ratio: 4 / 5; }
+  #экран-04 .случай__текст { position: relative; z-index: 2; display: grid; gap: .75rem; justify-items: start; margin-top: -1.5rem; padding-inline: .75rem; }
+  #экран-04 .случай__имя { margin: 0; padding: .55em .85em; border-radius: var(--радиус-малый); box-shadow: var(--тень-чип); }
+  #экран-04.светлый .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
+  #экран-04.тёмный .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
+  #экран-04 .случай__метка { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  #экран-04.светлый .случай__метка { color: var(--цвет-тёплый); }
+  #экран-04.тёмный .случай__метка { color: var(--цвет-тёплый-мягкий); }
+  #экран-04 .случай__что { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-04 .случай__итог { margin: 0; padding-left: 1em; font-size: var(--кегль-текст); font-weight: 600; border-left: var(--нить) solid; }
+  #экран-04.светлый .случай__итог { border-color: var(--цвет-тёплый); }
+  #экран-04.тёмный .случай__итог { border-color: var(--цвет-тёплый-мягкий); }
+  #экран-04 .ещё { display: grid; gap: 1.75rem; margin-top: calc(var(--отступ-блока) * 2.5); padding-top: calc(var(--отступ-блока) * 1.5); border-top: 1px solid color-mix(in srgb, currentColor 18%, transparent); }
+  #экран-04 .ещё__работа { display: grid; gap: .5rem; align-content: start; }
+  #экран-04 .ещё__работа h3 { margin: 0; }
+  #экран-04 .работы__пруф { margin: calc(var(--отступ-блока) * 1.5) 0 0; font-size: var(--кегль-текст); }
+  @media (min-width: 900px) {
+    #экран-04 .случай { grid-template-columns: 1.25fr 1fr; align-items: center; }
+    #экран-04 .случай__кадр { position: relative; z-index: 1; }
+    #экран-04 .случай__текст { margin-top: 0; padding-inline: 2.5rem 0; gap: 1rem; }
+    #экран-04 .случай__имя { margin-left: -5rem; }
+    #экран-04 .случай--наоборот .случай__кадр { order: 2; }
+    #экран-04 .случай--наоборот .случай__текст { padding-inline: 0 2.5rem; justify-items: end; text-align: right; }
+    #экран-04 .случай--наоборот .случай__имя { margin-left: 0; margin-right: -5rem; }
+    #экран-04 .случай--наоборот .случай__итог { padding-left: 0; padding-right: 1em; border-left: 0; border-right: var(--нить) solid; }
+    #экран-04 .случай--телефон { grid-template-columns: 1fr 1.25fr; }
+    #экран-04 .случай--телефон .случай__кадр { justify-self: end; }
+    #экран-04 .ещё { grid-template-columns: repeat(3, 1fr); column-gap: 3rem; }
+  }

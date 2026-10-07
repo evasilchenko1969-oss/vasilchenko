@@ -1870,3 +1870,10 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (min-width: 900px) {
     #экран-06 .слова { grid-template-columns: 1fr 1fr; column-gap: 4rem; row-gap: 3.5rem; }
   }
+
+/* экран 07 */
+#экран-07 .расспрос { margin-top: calc(var(--отступ-блока) * 2); max-width: 52rem; }
+  #экран-07 .расспрос .вопрос > summary { font-size: var(--кегль-лид); font-weight: 600; line-height: 1.35; padding-block: .35em; }
+  #экран-07 .расспрос .вопрос > p { max-width: 44rem; font-size: var(--кегль-текст); line-height: 1.6; }
+  #экран-07.светлый .расспрос .вопрос > summary::after { color: var(--цвет-тёплый); }
+  #экран-07.тёмный .расспрос .вопрос > summary::after { color: var(--цвет-тёплый-мягкий); }

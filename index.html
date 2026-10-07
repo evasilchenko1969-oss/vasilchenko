@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Сайт собирается</title>
-<meta name="description" content="">
+<title>Евгения Васильченко — оформление групп ВКонтакте и в Максе, ИИ-помощники</title>
+<meta name="description" content="Оформлю вашу группу ВКонтакте или в Максе и соберу помощника на нейросети, который поможет её вести. Бесплатная консультация — 30 минут">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://evasilchenko1969-oss.github.io/vasilchenko/">
-<meta property="og:title" content="Сайт собирается">
-<meta property="og:description" content="">
+<meta property="og:title" content="Евгения Васильченко — оформление групп ВКонтакте и в Максе, ИИ-помощники">
+<meta property="og:description" content="Евгения Васильченко — оформлю вашу группу и соберу помощника на нейросети">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -127,6 +127,9 @@
 /* слово Евгении 07.10.2026: на светлых экранах плашка над заголовком и кнопки — охрой, как кнопки обложки */
 .блок.светлый .кикер { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
 .блок.светлый { --цвет-кнопки: var(--цвет-тёплый-мягкий); --цвет-на-кнопке: var(--цвет-текст); --цвет-кнопки-навёл: color-mix(in srgb, var(--цвет-тёплый-мягкий) 80%, var(--цвет-фон)); }
+/* в меню шесть пунктов (добавлены «Вопросы», слово Евгении 07.10.2026): на узких телефонах пункты стоят плотнее, на самых узких меню листается вбок, а не режется */
+@media (max-width: 380px) { .шапка__меню { gap: .2em; } }
+@media (max-width: 340px) { .шапка__меню { justify-content: flex-start; gap: .9em; overflow-x: auto; scrollbar-width: none; } }
 :root, .светлый { --цвет-кнопки: #313458; --цвет-на-кнопке: #F3EFEC; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
 .тёмный { --цвет-кнопки: #D9A85C; --цвет-на-кнопке: #313458; --цвет-кнопки-навёл: #E1BA7D; }
 
@@ -177,7 +180,7 @@
 <section class="блок блок--первый-экран первый-экран--разворот тёмный фон--пятна сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото"><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
   <header class="шапка">
     <a class="шапка__лого" href="#">Евгения Васильченко</a>
-    <nav class="шапка__меню" aria-label="Разделы"><a href="#экран-02">Услуги</a><a href="#экран-03">Обо мне</a><a href="#экран-04">Работы</a><a href="#экран-06">Отзывы</a><a href="#экран-контакты">Контакты</a></nav>
+    <nav class="шапка__меню" aria-label="Разделы"><a href="#экран-02">Услуги</a><a href="#экран-03">Обо мне</a><a href="#экран-04">Работы</a><a href="#экран-06">Отзывы</a><a href="#экран-07">Вопросы</a><a href="#экран-контакты">Контакты</a></nav>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M4 5h16v11H9l-5 4z"/>
 </svg><span><span class="полн">Отвечаю в Максе и ВКонтакте</span></span></span>
@@ -459,7 +462,7 @@
 </div>
 </section>
 <a id="экран-контакты" aria-hidden="true"></a>
-<section class="блок блок--контакты блок--тихо светлый" id="экран-08" data-тип="контакты" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон-2, var(--цвет-тёмный-фон))"></div>
+<section class="блок блок--контакты блок--тихо светлый" id="экран-08" data-тип="контакты" data-вёрстка="своя"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон-2, var(--цвет-тёмный-фон))"></div><div class="стык стык--низ" aria-hidden="true" style="--стык-сосед: var(--цвет-тёмный-фон)"></div>
 <div class="блок__внутри">
   <div class="секция__шапка">
     <p class="кикер">Связаться</p>
@@ -488,6 +491,40 @@
     </div>
   </div>
 </div>
+</section>
+<section class="блок блок--подвал тёмный" id="экран-09" data-тип="подвал"><div class="стык стык--верх" aria-hidden="true" style="--стык-сосед: var(--цвет-фон)"></div>
+  <div class="блок__внутри">
+    <div class="подвал__сетка">
+      <div>
+        <span class="подвал__лого">Евгения Васильченко</span>
+        <p>Оформление групп и ИИ-помощники</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <div class="подвал__ссылки подвал__разделы">
+          <a href="#экран-02">Услуги и цены</a>
+          <a href="#экран-03">Почему я</a>
+          <a href="#экран-04">Что уже сделано</a>
+          <a href="#экран-05">Как я работаю</a>
+          <a href="#экран-06">Отзывы</a>
+          <a href="#экран-07">Вопросы и ответы</a>
+          <a href="#экран-08">Связаться</a>
+        </div>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <div class="подвал__ссылки">
+          <a href="https://max.ru/u/f9LHodD0cOJ8u-Sp2Xkjx8D-F8R5q0F4vUVFUpRsPpmvyljyREmuO0KdEmE">Макс</a>
+          <a href="https://vk.ru/evgeniyavasilchenko">ВКонтакте</a>
+          <a href="https://vk.ru/evgeniya.v_smm">Группа ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+    <div class="подвал__низ">
+      <span>Самозанятая Васильченко Евгения Петровна · ИНН 260700195849</span>
+      <span>© 2026</span>
+    </div>
+  </div>
 </section>
 <div class="липкая-кнопка липкая-кнопка--тёмная"><a class="кнопка кнопка--главная" href="https://max.ru/u/f9LHodD0cOJ8u-Sp2Xkjx8D-F8R5q0F4vUVFUpRsPpmvyljyREmuO0KdEmE">Макс</a></div>
 <script>

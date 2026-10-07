@@ -1743,7 +1743,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-02.светлый .путь__точка { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
   #экран-02.тёмный .путь__точка { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
   #экран-02 .путь__метка { display: block; margin-bottom: .375rem; font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
-  #экран-02.светлый .путь__метка { color: var(--цвет-тёплый); }
+  #экран-02.светлый .путь__метка { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-02.тёмный .путь__метка { color: var(--цвет-тёплый-мягкий); }
   #экран-02 .путь__имя { margin: .3rem 0 0; }
   #экран-02 .путь__что { margin: .625rem 0 0; max-width: 34rem; font-size: var(--кегль-текст); line-height: 1.55; }
@@ -1803,7 +1803,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-04.светлый .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
   #экран-04.тёмный .случай__имя { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
   #экран-04 .случай__метка { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
-  #экран-04.светлый .случай__метка { color: var(--цвет-тёплый); }
+  #экран-04.светлый .случай__метка { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-04.тёмный .случай__метка { color: var(--цвет-тёплый-мягкий); }
   #экран-04 .случай__что { margin: 0; font-size: var(--кегль-текст); line-height: 1.55; }
   #экран-04 .случай__итог { margin: 0; padding-left: 1em; font-size: var(--кегль-текст); font-weight: 600; border-left: var(--нить) solid; }
@@ -1839,7 +1839,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-05 .ход__верх { display: flex; flex-wrap: wrap; align-items: baseline; gap: .375rem 1rem; min-height: 2.5rem; align-content: center; }
   #экран-05 .ход__имя { margin: 0; }
   #экран-05 .ход__срок { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
-  #экран-05.светлый .ход__срок { color: var(--цвет-тёплый); }
+  #экран-05.светлый .ход__срок { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-05.тёмный .ход__срок { color: var(--цвет-тёплый-мягкий); }
   #экран-05 .ход__что { margin: 0; max-width: 40rem; font-size: var(--кегль-текст); line-height: 1.55; }
   #экран-05 .ход__итог { margin: calc(var(--отступ-блока) * 2) 0 0; padding-left: 1.25rem; max-width: 44rem; font-size: var(--кегль-лид); line-height: 1.5; border-left: var(--нить) solid; }
@@ -1859,7 +1859,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-06.светлый .слово { border-color: var(--цвет-тёплый-мягкий); }
   #экран-06.тёмный .слово { border-color: color-mix(in srgb, var(--цвет-тёплый-мягкий) 60%, transparent); }
   #экран-06 .слово__метка { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
-  #экран-06.светлый .слово__метка { color: var(--цвет-тёплый); }
+  #экран-06.светлый .слово__метка { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-06.тёмный .слово__метка { color: var(--цвет-тёплый-мягкий); }
   #экран-06 .слово__текст { margin: 0; font-size: var(--кегль-лид); line-height: 1.55; }
   #экран-06 .слово__кто { display: grid; gap: .125rem; font-size: var(--кегль-текст); }
@@ -1875,7 +1875,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 #экран-07 .расспрос { margin-top: calc(var(--отступ-блока) * 2); max-width: 52rem; }
   #экран-07 .расспрос .вопрос > summary { font-size: var(--кегль-лид); font-weight: 600; line-height: 1.35; padding-block: .35em; }
   #экран-07 .расспрос .вопрос > p { max-width: 44rem; font-size: var(--кегль-текст); line-height: 1.6; }
-  #экран-07.светлый .расспрос .вопрос > summary::after { color: var(--цвет-тёплый); }
+  #экран-07.светлый .расспрос .вопрос > summary::after { color: color-mix(in srgb, var(--цвет-тёплый) 68%, var(--цвет-текст)); }
   #экран-07.тёмный .расспрос .вопрос > summary::after { color: var(--цвет-тёплый-мягкий); }
 
 /* экран 08 */

@@ -1852,3 +1852,21 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (min-width: 900px) {
     #экран-05 .ход__шаг { padding-left: 4.5rem; }
   }
+
+/* экран 06 */
+#экран-06 .слова { display: grid; gap: calc(var(--отступ-блока) * 2.25); margin-top: calc(var(--отступ-блока) * 2.25); }
+  #экран-06 .слово { margin: 0; display: grid; gap: .875rem; align-content: start; padding-left: 1.5rem; border-left: var(--нить) solid; }
+  #экран-06.светлый .слово { border-color: var(--цвет-тёплый-мягкий); }
+  #экран-06.тёмный .слово { border-color: color-mix(in srgb, var(--цвет-тёплый-мягкий) 60%, transparent); }
+  #экран-06 .слово__метка { font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  #экран-06.светлый .слово__метка { color: var(--цвет-тёплый); }
+  #экран-06.тёмный .слово__метка { color: var(--цвет-тёплый-мягкий); }
+  #экран-06 .слово__текст { margin: 0; font-size: var(--кегль-лид); line-height: 1.55; }
+  #экран-06 .слово__кто { display: grid; gap: .125rem; font-size: var(--кегль-текст); }
+  #экран-06 .слово__кто b { font-weight: 700; }
+  #экран-06.светлый .слово__откуда { color: var(--цвет-текст-мягкий); }
+  #экран-06.тёмный .слово__откуда { color: color-mix(in srgb, var(--цвет-тёмный-текст) 72%, transparent); }
+  #экран-06 .слова__пруф { margin: calc(var(--отступ-блока) * 2) 0 0; font-size: var(--кегль-текст); }
+  @media (min-width: 900px) {
+    #экран-06 .слова { grid-template-columns: 1fr 1fr; column-gap: 4rem; row-gap: 3.5rem; }
+  }

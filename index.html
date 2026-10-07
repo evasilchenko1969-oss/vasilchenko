@@ -96,6 +96,24 @@
 @media (min-width: 900px) {
   .блок.первый-экран--сцена h1 { font-size: clamp(2rem, 2.9vw, 2.75rem); }   /* Unbounded шире макетного шрифта: макетный кегль давал пять строк */
 }
+/* обложка «разворот-слева», тёмный ключ — выбор Евгении 07.10.2026 */
+/* второе пятно схемы — почти белый круг: на тёмном он ложился под светлый текст, и на телефоне подзаголовок не читался. Здесь оно — тихое свечение в тон фона */
+.блок.тёмный.первый-экран--разворот .пятно--2 { background: color-mix(in srgb, var(--цвет-акцент-яркий) 38%, transparent); }
+/* надпись над кнопками — обычным текстом, не плашкой (замечание Евгении) */
+.первый-экран__зов { font: 400 var(--кегль-текст)/1.4 var(--шрифт-текста); margin: 0; }
+/* две кнопки рядом и одной высоты, название в одну строку там, где влезает */
+.блок.первый-экран--разворот .первый-экран__действие { display: flex; flex-flow: row nowrap; align-items: stretch; gap: .75em; }
+.блок.первый-экран--разворот .первый-экран__действие .кнопка { width: auto; display: flex; align-items: center; }
+@media (min-width: 900px) {
+  .блок.первый-экран--разворот .первый-экран__действие { max-width: 36em; }
+  .блок.первый-экран--разворот .первый-экран__действие .кнопка { white-space: nowrap; }
+}
+@media (max-width: 899px) {
+  .блок.первый-экран--разворот .первый-экран__действие .кнопка { padding-inline: .5em; line-height: 1.2; }
+  /* заголовок длинный: фото на телефоне ниже, чтобы обе кнопки остались в первом окне */
+  .блок.первый-экран--разворот { --фото-в: min(125vw, calc(42vh - var(--недостаёт) * .1)); }
+  @supports (height: 100svh) { .блок.первый-экран--разворот { --фото-в: min(125vw, calc(42svh - var(--недостаёт) * .1)); } }
+}
 :root, .светлый { --цвет-кнопки: #313458; --цвет-на-кнопке: #F3EFEC; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
 .тёмный { --цвет-кнопки: #D9A85C; --цвет-на-кнопке: #313458; --цвет-кнопки-навёл: #E1BA7D; }
 
@@ -144,28 +162,33 @@
 </head>
 <body class="с-липкой-кнопкой">
 <a id="экран-контакты" aria-hidden="true"></a>
-<section class="блок блок--первый-экран первый-экран--сцена тёмный фон--пятна" id="экран-1" data-тип="первый-экран" data-схема="сцена" data-ключ-макета="тёмная" data-картинка="фото" style="--добор-затемнения: 0; --добор-высветления: 0">
+<section class="блок блок--первый-экран первый-экран--разворот тёмный фон--пятна сторона--слева" id="экран-1" data-тип="первый-экран" data-схема="разворот" data-ключ-макета="светлая" data-картинка="фото">
   <header class="шапка">
     <a class="шапка__лого" href="#">Евгения Васильченко</a>
     <nav class="шапка__меню" aria-label="Разделы"><a href="#экран-2">Услуги</a><a href="#экран-3">Обо мне</a><a href="#экран-4">Работы</a><a href="#экран-6">Отзывы</a><a href="#экран-контакты">Контакты</a></nav>
     <span class="шапка__лиц"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
+  <path d="M4 5h16v11H9l-5 4z"/>
 </svg><span><span class="полн">Отвечаю в Максе и ВКонтакте</span></span></span>
   </header>
-  <figure class="картинка картинка--сцена первый-экран__картинка"><picture><source media="(max-width: 899px)" srcset="img/portret-stellazh-telefon.webp"><img src="img/portret-stellazh.webp" alt="Евгения Васильченко у книжного стеллажа" data-лицо="53,37" fetchpriority="high"></picture></figure>
+  <span class="пятно пятно--1"></span><span class="пятно пятно--2"></span>
   <div class="блок__внутри">
     <div class="первый-экран__текст">
       <p class="кикер"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
   <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
-</svg>Нейросети и автоматизация рутины</p>
-      <h1>Каждый день делаете одно и то же? Передайте это <em class="акцент">агенту</em></h1>
-      <p class="лид">Передаю рутину нейросети там, где это правда помогает, и оформляю сообщества ВКонтакте и в Максе</p>
-      <p class="лид первый-экран__зов"><b>Записаться на консультацию</b></p>
+</svg>Оформление групп и ИИ-помощники</p>
+      <h1>Оформлю вашу группу и соберу <em class="акцент">помощника</em> на нейросети</h1>
+      <p class="лид">Группа ВКонтакте или в Максе с понятным оформлением и планом публикаций. Идеи для постов, черновики и подборки новостей возьмёт на себя ИИ-помощник</p>
+      <p class="первый-экран__зов">Бесплатная консультация, 30 минут — напишите, где вам удобнее</p>
       <div class="первый-экран__действие"><a class="кнопка кнопка--главная" href="https://max.ru/u/f9LHodD0cOJ8u-Sp2Xkjx8D-F8R5q0F4vUVFUpRsPpmvyljyREmuO0KdEmE">Макс</a><a class="кнопка кнопка--главная" href="https://vk.ru/evgeniyavasilchenko">ВКонтакте</a></div>
       <p class="мелкий первый-экран__доверие"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6L12 3z"/>
-</svg> 30 минут, бесплатно</p>
+  <circle cx="9" cy="8" r="3.5"/>
+  <circle cx="17" cy="9" r="2.5"/>
+  <path d="M3 20a6 6 0 0 1 12 0M15 20a4 4 0 0 1 6 0"/>
+</svg> Работаю с репетиторами, экспертами, предпринимателями</p>
     </div>
+    <figure class="картинка картинка--фото картинка--край первый-экран__картинка" style="--лицо-в-кадре: .28">
+      <picture><source media="(max-width: 899px)" srcset="img/portret-stellazh-zerkalo-telefon.webp"><img src="img/portret-stellazh-zerkalo.webp" alt="Евгения Васильченко у книжного стеллажа" data-лицо="50,22" fetchpriority="high"></picture>
+    </figure>
   </div>
 </section>
 <div class="липкая-кнопка липкая-кнопка--тёмная"><a class="кнопка кнопка--главная" href="https://max.ru/u/f9LHodD0cOJ8u-Sp2Xkjx8D-F8R5q0F4vUVFUpRsPpmvyljyREmuO0KdEmE">Макс</a></div>

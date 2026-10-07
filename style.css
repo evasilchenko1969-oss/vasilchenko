@@ -1732,3 +1732,35 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     mask-image: linear-gradient(to bottom, black 74%, transparent); -webkit-mask-image: linear-gradient(to bottom, black 74%, transparent); }
   .блок.первый-экран--разворот .чип--автор { top: calc(var(--лицо-тел) + 6.7em); }
 }
+
+/* экран 02 */
+#экран-02 .путь { position: relative; list-style: none; margin: calc(var(--отступ-блока) * 2.25) 0 0; padding: 0; display: grid; gap: calc(var(--отступ-блока) * 2.25); }
+  #экран-02 .путь::before { content: ""; position: absolute; left: 1.25rem; top: 1.25rem; bottom: 0; width: var(--нить); margin-left: calc(var(--нить) / -2); border-radius: 9em; }
+  #экран-02.светлый .путь::before { background: linear-gradient(to bottom, var(--цвет-тёплый-мягкий) 80%, transparent); }
+  #экран-02.тёмный .путь::before { background: linear-gradient(to bottom, color-mix(in srgb, var(--цвет-тёплый-мягкий) 60%, transparent) 80%, transparent); }
+  #экран-02 .путь__шаг { position: relative; display: grid; gap: .875rem; padding-left: 3.75rem; }
+  #экран-02 .путь__точка { position: absolute; left: 0; top: 0; width: 2.5rem; height: 2.5rem; border-radius: 50%; display: grid; place-items: center; font-size: var(--кегль-текст); font-weight: 700; box-shadow: var(--тень-чип); }
+  #экран-02.светлый .путь__точка { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+  #экран-02.тёмный .путь__точка { background: var(--цвет-тёплый-мягкий); color: var(--цвет-текст); }
+  #экран-02 .путь__метка { display: block; margin-bottom: .375rem; font-size: var(--кегль-мелкий); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  #экран-02.светлый .путь__метка { color: var(--цвет-тёплый); }
+  #экран-02.тёмный .путь__метка { color: var(--цвет-тёплый-мягкий); }
+  #экран-02 .путь__имя { margin: .3rem 0 0; }
+  #экран-02 .путь__что { margin: .625rem 0 0; max-width: 34rem; font-size: var(--кегль-текст); line-height: 1.55; }
+  #экран-02 .путь__состав { list-style: none; margin: .875rem 0 0; padding: 0; display: grid; gap: .4rem; max-width: 34rem; font-size: var(--кегль-текст); line-height: 1.45; }
+  #экран-02 .путь__состав li { position: relative; padding-left: 1.25em; }
+  #экран-02 .путь__состав li::before { content: ""; position: absolute; left: 0; top: .55em; width: .4em; height: .4em; border-radius: 50%; }
+  #экран-02.светлый .путь__состав li::before { background: var(--цвет-тёплый); }
+  #экран-02.тёмный .путь__состав li::before { background: var(--цвет-тёплый-мягкий); }
+  #экран-02 .путь__итог { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .875rem; margin: 0; }
+  #экран-02.светлый .путь__цена { color: var(--цвет-акцент); }
+  #экран-02.тёмный .путь__цена { color: var(--цвет-тёплый-мягкий); }
+  #экран-02 .путь__цена { white-space: nowrap; }
+  #экран-02 .путь__срок { font-size: var(--кегль-текст); white-space: nowrap; }
+  #экран-02 .путь__низ { display: grid; gap: 1.25rem; justify-items: start; margin-top: calc(var(--отступ-блока) * 2); padding-left: 3.75rem; }
+  #экран-02 .путь__низ .мелкий { margin: 0; font-size: var(--кегль-текст); }
+  @media (min-width: 900px) {
+    #экран-02 .путь__шаг { grid-template-columns: 1fr auto; column-gap: 3rem; align-items: start; padding-left: 4.5rem; }
+    #экран-02 .путь__итог { flex-direction: column; align-items: flex-end; text-align: right; gap: .5rem; padding-top: .25rem; }
+    #экран-02 .путь__низ { padding-left: 4.5rem; }
+  }

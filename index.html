@@ -141,6 +141,10 @@
   body.с-липкой-кнопкой { padding-bottom: 0; }
   body.с-липкой-кнопкой .блок--первый-экран { padding-bottom: calc(var(--отступ-секции) * .7); }
 }
+/* слово Евгении 08.10.2026 «облегчи шрифт»: шрифт заголовков лежит на сайте своим файлом — только русские и латинские буквы, цифры и знаки, насыщенность 400–700 (один файл вместо трёх с Google, 200 КБ); три правила — по одному на каждую насыщенность, как у Google, иначе браузер берёт его файлы; знака в файле нет — браузер сам возьмёт его у Google, как раньше */
+@font-face { font-family: Unbounded; font-style: normal; font-weight: 400; font-display: swap; src: url(img/unbounded.woff2) format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B0, U+00B7, U+00BB, U+00D7, U+0401, U+0410-044F, U+0451, U+2013-2014, U+2019, U+201C-201E, U+2022, U+2026, U+20BD, U+2116; }
+@font-face { font-family: Unbounded; font-style: normal; font-weight: 600; font-display: swap; src: url(img/unbounded.woff2) format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B0, U+00B7, U+00BB, U+00D7, U+0401, U+0410-044F, U+0451, U+2013-2014, U+2019, U+201C-201E, U+2022, U+2026, U+20BD, U+2116; }
+@font-face { font-family: Unbounded; font-style: normal; font-weight: 700; font-display: swap; src: url(img/unbounded.woff2) format("woff2"); unicode-range: U+0020-007E, U+00A0, U+00AB, U+00B0, U+00B7, U+00BB, U+00D7, U+0401, U+0410-044F, U+0451, U+2013-2014, U+2019, U+201C-201E, U+2022, U+2026, U+20BD, U+2116; }
 :root, .светлый { --цвет-кнопки: #313458; --цвет-на-кнопке: #F3EFEC; --цвет-кнопки-навёл: var(--цвет-акцент-тёмный); }
 .тёмный { --цвет-кнопки: #D9A85C; --цвет-на-кнопке: #313458; --цвет-кнопки-навёл: #E1BA7D; }
 
